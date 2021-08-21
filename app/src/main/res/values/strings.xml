@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">Tic Tac Toe</string>
+    <string name="app_name">Tic_Tac_Toe_Game</string>
+    <string name="tic_tac_toe">Tic Tac Toe</string>
+    <string name="v_1_0">v 1.0</string>
+    <string name="Play">Play</string>
+    <string name="two_players">Two Players</string>
+    <string name="scoreboard">Scoreboard</string>
+    <string name="player_1_0">Player 1: 0</string>
+    <string name="player_2_0">Player 2: 0</string>
+    <string name="_00">00</string>
+    <string name="_10">10</string>
+    <string name="_20">20</string>
+    <string name="_01">01</string>
+    <string name="_02">02</string>
+    <string name="_11">11</string>
+    <string name="_12">12</string>
+    <string name="_21">21</string>
+    <string name="_22">22</string>
+    <string name="_03">03</string>
+    <string name="reset">Reset</string>
 </resources>

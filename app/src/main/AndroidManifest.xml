@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToe">
         <activity
-            android:name=".GameModeActivity"
+            android:name=".ui.TwoPlayerGameActivity"
             android:exported="true" />
         <activity
-            android:name=".MainMenuActivity"
+            android:name=".ui.SelectPlayerActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.LandingPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
