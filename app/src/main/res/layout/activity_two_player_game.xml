@@ -186,8 +186,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn21"
         app:layout_constraintWidth_percent=".6" />
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
