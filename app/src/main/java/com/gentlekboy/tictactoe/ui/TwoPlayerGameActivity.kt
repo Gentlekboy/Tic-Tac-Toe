@@ -1,5 +1,6 @@
 package com.gentlekboy.tictactoe.ui
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.res.ResourcesCompat
 import com.gentlekboy.tictactoe.R
 
@@ -48,7 +50,7 @@ class TwoPlayerGameActivity : AppCompatActivity() {
                 r-> Array(3){
                 c-> initButton(r, c)
         }
-        }
+    }
         /**
          * Set onClickListener on reset button
          */
@@ -56,9 +58,8 @@ class TwoPlayerGameActivity : AppCompatActivity() {
             player1Points = 0
             player2Points = 0
             updateScore()
-            clearBoard()}
-
-
+            clearBoard()
+        }
     }
 
     /**
@@ -89,7 +90,6 @@ class TwoPlayerGameActivity : AppCompatActivity() {
         }
 
     }
-
 
     private fun checkForWin(): Boolean {
         val fields = Array(3){r->
@@ -126,7 +126,6 @@ class TwoPlayerGameActivity : AppCompatActivity() {
         ) return true
 
         return false
-
     }
 
     private fun getField(btn: ImageView): Char? {
@@ -141,7 +140,6 @@ class TwoPlayerGameActivity : AppCompatActivity() {
         }
     }
 
-
     private fun win(player:Int) {
         if(player == 1) player1Points++ else player2Points++
         Toast.makeText(
@@ -149,10 +147,26 @@ class TwoPlayerGameActivity : AppCompatActivity() {
             "Player $player Won!",
             Toast.LENGTH_SHORT).show()
         updateScore()
-        clearBoard()
-
+//        clearBoard()
+        showDialog("Player $player Wins!")
     }
 
+    private fun showDialog(winner: String) {
+        val message = "Player 1: $player1Points\nPlayer 2: $player2Points"
+
+        AlertDialog.Builder(this).apply {
+            setTitle(winner)
+            setMessage(message)
+            setPositiveButton("Play Again"){ firstParam, secondParam ->
+                clearBoard()
+            }
+            setNegativeButton("Exit game"){firstParam, secondParam ->
+                startActivity(Intent(this@TwoPlayerGameActivity, LandingPageActivity::class.java))
+            }
+            setCancelable(false)
+            show()
+        }
+    }
 
     private fun draw() {
         Toast.makeText(this, "Match Draw!", Toast.LENGTH_SHORT).show()
@@ -173,5 +187,4 @@ class TwoPlayerGameActivity : AppCompatActivity() {
         instanceOfPlayerOneScoreTextView.text = "Player 1: $player1Points"
         instanceOfPlayerTwoTextView.text = "Player 2: $player2Points"
     }
-
 }
