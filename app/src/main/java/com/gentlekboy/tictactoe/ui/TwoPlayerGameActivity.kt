@@ -170,7 +170,7 @@ class TwoPlayerGameActivity : AppCompatActivity() {
 
     private fun draw() {
         Toast.makeText(this, "Match Draw!", Toast.LENGTH_SHORT).show()
-        clearBoard()
+        showDialog("Draw!")
     }
 
     private fun clearBoard() {
