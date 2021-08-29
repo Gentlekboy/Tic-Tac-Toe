@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToe">
         <activity
+            android:name=".ui.OnePlayerGameActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.TwoPlayerGameActivity"
             android:exported="true" />
         <activity
