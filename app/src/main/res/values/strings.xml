@@ -26,4 +26,6 @@
     <string name="one_player">One player</string>
     <string name="_0">0</string>
     <string name="computer">Computer</string>
+    <string name="player_1_s_turn">Player 1\'s turn</string>
+    <string name="player_2_s_turn">Player 2\'s turn</string>
 </resources>
