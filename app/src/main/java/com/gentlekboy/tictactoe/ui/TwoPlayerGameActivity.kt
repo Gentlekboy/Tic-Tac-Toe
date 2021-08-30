@@ -184,7 +184,7 @@ class TwoPlayerGameActivity : AppCompatActivity() {
     }
 
     private fun updateScore() {
-        instanceOfPlayerOneScoreTextView.text = "Player 1: $player1Points"
-        instanceOfPlayerTwoTextView.text = "Player 2: $player2Points"
+        instanceOfPlayerOneScoreTextView.text = player1Points.toString()
+        instanceOfPlayerTwoTextView.text = player2Points.toString()
     }
 }
