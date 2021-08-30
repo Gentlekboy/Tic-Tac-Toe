@@ -28,4 +28,7 @@
     <string name="computer">Computer</string>
     <string name="player_1_s_turn">Player 1\'s turn</string>
     <string name="player_2_s_turn">Player 2\'s turn</string>
+    <string name="reset_game">Reset game</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
 </resources>
