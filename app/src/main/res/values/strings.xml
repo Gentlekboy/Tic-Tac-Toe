@@ -24,4 +24,6 @@
     <string name="report_a_bug">Report a bug</string>
     <string name="exit">Exit</string>
     <string name="one_player">One player</string>
+    <string name="_0">0</string>
+    <string name="computer">Computer</string>
 </resources>

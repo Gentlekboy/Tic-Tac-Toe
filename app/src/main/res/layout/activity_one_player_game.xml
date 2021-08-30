@@ -4,6 +4,248 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/app_background"
     tools:context=".ui.OnePlayerGameActivity">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/player_one_card"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/player_two_card"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/scorecard_background"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/starting_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/maven_pro_black"
+                android:text="@string/x"
+                android:textColor="@color/red"
+                android:textSize="48sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/player_one_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Player 1"
+                android:textColor="@color/light_gray"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/starting_letter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/starting_letter"
+                app:layout_constraintTop_toBottomOf="@+id/starting_letter" />
+
+            <TextView
+                android:id="@+id/player_one_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/maven_pro_black"
+                android:text="@string/_0"
+                android:textColor="@color/light_gray"
+                android:textSize="48sp"
+                app:layout_constraintEnd_toEndOf="@+id/player_one_name"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/player_one_name"
+                app:layout_constraintTop_toBottomOf="@+id/player_one_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/player_two_card"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/player_one_card"
+        app:layout_constraintTop_toTopOf="@+id/player_one_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/scorecard_background"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/second_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/maven_pro_black"
+                android:text="@string/o"
+                android:textColor="@color/green"
+                android:textSize="48sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/player_two_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/computer"
+                android:textColor="@color/light_gray"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/second_letter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/second_letter"
+                app:layout_constraintTop_toBottomOf="@+id/second_letter" />
+
+            <TextView
+                android:id="@+id/player_two_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/maven_pro_black"
+                android:text="@string/_0"
+                android:textColor="@color/light_gray"
+                android:textSize="48sp"
+                app:layout_constraintEnd_toEndOf="@+id/player_two_name"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/player_two_name"
+                app:layout_constraintTop_toBottomOf="@+id/player_two_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Player 1's turn"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/player_two_card"
+        app:layout_constraintStart_toStartOf="@+id/player_one_card"
+        app:layout_constraintTop_toBottomOf="@+id/player_one_card" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_one"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@drawable/border_button"
+            android:onClick="clickButton"
+            android:textSize="60sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_two"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:background="@drawable/border_button"
+            android:onClick="clickButton"
+            android:textSize="60sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_three"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:background="@drawable/border_button"
+            android:onClick="clickButton"
+            android:textSize="60sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_four"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:background="@drawable/border_button"
+            android:onClick="clickButton"
+            android:textSize="60sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_five"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:background="@drawable/border_button"
+            android:onClick="clickButton"
+            android:textSize="60sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_six"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:background="@drawable/border_button"
+            android:onClick="clickButton"
+            android:textSize="60sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_seven"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:background="@drawable/border_button"
+            android:onClick="clickButton"
+            android:textSize="60sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_eight"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:background="@drawable/border_button"
+            android:onClick="clickButton"
+            android:textSize="60sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_nine"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:background="@drawable/border_button"
+            android:onClick="clickButton"
+            android:textSize="60sp" />
+    </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
