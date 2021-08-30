@@ -283,7 +283,7 @@ class OnePlayerGameActivity : AppCompatActivity() {
     }
 
     private fun showDialog(winner: String) {
-        val message = "Player 1: $playerOneScore\nPlayer 2: $playerTwoScore"
+        val message = "Player 1: $playerOneScore\n\nComputer: $playerTwoScore"
 
         AlertDialog.Builder(this).apply {
             setTitle(winner)
