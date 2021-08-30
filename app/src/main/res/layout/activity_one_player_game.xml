@@ -54,7 +54,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/starting_letter" />
 
             <TextView
-                android:id="@+id/player_one_score"
+                android:id="@+id/playerOneScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -115,7 +115,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/second_letter" />
 
             <TextView
-                android:id="@+id/player_two_score"
+                android:id="@+id/playerTwoScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -138,6 +138,7 @@
         android:text="@string/player_1_s_turn"
         android:textAlignment="center"
         android:textColor="@color/red"
+        android:visibility="gone"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/player_two_card"
         app:layout_constraintStart_toStartOf="@+id/player_one_card"
@@ -149,17 +150,16 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:columnCount="3"
         android:rowCount="3"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/resetButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/player_turns">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_one"
+            android:id="@+id/buttonOne"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_row="0"
@@ -170,7 +170,7 @@
             android:textSize="60sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_two"
+            android:id="@+id/buttonTwo"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_row="0"
@@ -181,7 +181,7 @@
             android:textSize="60sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_three"
+            android:id="@+id/buttonThree"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_row="0"
@@ -192,7 +192,7 @@
             android:textSize="60sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_four"
+            android:id="@+id/buttonFour"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_row="1"
@@ -203,7 +203,7 @@
             android:textSize="60sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_five"
+            android:id="@+id/buttonFive"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_row="1"
@@ -214,7 +214,7 @@
             android:textSize="60sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_six"
+            android:id="@+id/buttonSix"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_row="1"
@@ -225,7 +225,7 @@
             android:textSize="60sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_seven"
+            android:id="@+id/buttonSeven"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_row="2"
@@ -236,7 +236,7 @@
             android:textSize="60sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_eight"
+            android:id="@+id/buttonEight"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_row="2"
@@ -247,7 +247,7 @@
             android:textSize="60sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_nine"
+            android:id="@+id/buttonNine"
             android:layout_width="105dp"
             android:layout_height="105dp"
             android:layout_row="2"
@@ -257,4 +257,18 @@
             android:onClick="clickButton"
             android:textSize="60sp" />
     </GridLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/border_button"
+        android:paddingHorizontal="20dp"
+        android:text="@string/reset_game"
+        android:textColor="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
